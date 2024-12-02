@@ -1,1 +1,170 @@
-/* Add your own styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(34, 49, 63);
+    font-family: 'Cambria', Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: aliceblue;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: rgb(0, 41, 122);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    width: 100%;
+    font-size: 24px;
+}
+
+img {
+    border-radius: 50%;
+    max-width: 100%;
+    height: auto;
+}
+
+.input-box {
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+    padding-bottom: 8px;
+    gap: 10px;
+}
+
+.input-box input[type="search"] {
+    width: 50dvh;
+    height: 5vh;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid rgb(100, 110, 120);
+}
+
+.input-box label {
+    color: aliceblue;
+    font-size: 30px;
+    padding-right: 10px;
+    font-weight: bold;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 8px;
+}
+
+.buttons button {
+    width: 120px;
+    height: 30px;
+    cursor: pointer;
+    border-radius: 7px;
+    color: aliceblue;
+    background-color: rgb(0, 41, 122);
+    font-size: 16px;
+    font-family: 'Cambria', Cochin, Georgia, Times, 'Times New Roman', serif;
+    border: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.buttons button:hover {
+    background-color: rgb(0, 76, 167);
+    transform: scale(1.05);
+}
+
+#lookup {
+    color: rgb(50, 205, 50);
+}
+
+#lookupCities {
+    color: rgb(255, 223, 0);
+}
+
+#result {
+    color: aliceblue;
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: rgb(0, 41, 122);
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: rgb(100, 150, 255);
+}
+
+tr:hover {
+    background-color: rgb(0, 76, 167);
+}
+
+@media (max-width: 768px) {
+    .input-box input[type="search"] {
+        width: 80vw;
+    }
+
+    .buttons button {
+        width: 100px;
+        height: 35px;
+        font-size: 14px;
+    }
+
+    th, td {
+        font-size: 14px;
+    }
+
+    header {
+        font-size: 20px;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        font-size: 18px;
+        padding: 8px;
+    }
+
+    .input-box input[type="search"] {
+        width: 90vw;
+    }
+
+    .buttons {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .buttons button {
+        width: 100%;
+        font-size: 14px;
+    }
+
+    table {
+        font-size: 12px;
+    }
+}
